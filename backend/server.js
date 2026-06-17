@@ -47,7 +47,7 @@ function handleError(res, error, message = "Error interno del servidor") {
 
 // Ruta raíz
 app.get("/", (req, res) => {
-  res.json({ message: "hola" });
+  res.json({ message: "hola", version: "1.0.0" });
 });
 
 // Obtener todos los productos
