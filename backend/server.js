@@ -43,6 +43,12 @@ function handleError(res, error, message = "Error interno del servidor") {
   res.status(500).json({ message });
 }
 
+
+// Ruta raíz
+app.get("/", (req, res) => {
+  res.json({ message: "hola" });
+});
+
 // Obtener todos los productos
 app.get("/api/productos", async (req, res) => {
   try {
